@@ -7,13 +7,12 @@ pipeline {
     stages{
         stage("build code"){
             steps{
-                sh """ echo 'hello docker' >  demo.txt && echo "nice  $Envionment_name" >> demo.txt  """
-				sh " ./eagle.sh $Envionment_name"
+                sh " echo build"
         }
         }
         stage("create package"){
             steps{
-                sh " echo package $useranme"
+                sh " echo package"
           }
         }
         stage("package upload"){
